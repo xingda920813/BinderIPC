@@ -24,12 +24,11 @@ class Provider : ContentProvider() {
 
     override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array<out String>?) = 0
 
-    @Suppress("UnnecessaryVariable")
     override fun call(authority: String, method: String, arg: String?, extras: Bundle?): Bundle? {
         val reply = Bundle()
         when (method) {
             "sayHello" -> {
-                val firstPerson = arg
+                val firstPerson = arg.toString()
                 val secondPerson = extras?.getString("secondPerson")
                 reply.putString("reply", "Hello, $firstPerson and $secondPerson")
             }
