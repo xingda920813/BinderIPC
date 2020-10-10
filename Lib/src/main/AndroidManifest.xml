@@ -1,0 +1,9 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.contoso.lib">
+
+    <permission
+        android:name="com.contoso.lib.IpcPermission"
+        android:protectionLevel="signature"/>
+
+</manifest>

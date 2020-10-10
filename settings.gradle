@@ -1,0 +1,4 @@
+include ':Lib'
+include ':Server'
+include ':Client'
+rootProject.name = "BinderIPC"

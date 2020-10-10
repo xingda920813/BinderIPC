@@ -1,0 +1,30 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.contoso.server">
+
+    <application
+        android:name=".App">
+
+        <activity
+            android:name=".ServerActivity"
+            android:label="ServerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Server"
+            android:exported="true"
+            android:permission="com.contoso.lib.IpcPermission"/>
+
+        <provider
+            android:authorities="com.contoso.server.Provider"
+            android:name=".Provider"
+            android:exported="true"
+            android:permission="com.contoso.lib.IpcPermission"/>
+
+    </application>
+
+</manifest>
